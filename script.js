@@ -12,13 +12,14 @@ $(document).ready(function(){
     var saveBtn8 = $(".saveBtn8");
     var saveBtn9 = $(".saveBtn9");
 
-    // const restoreText = () => {
-
-    // }
+    const restoreText = () => {
+        for(var i = 1; i < 10; i++) {
+            var strNoQuotes = localStorage.getItem("description" + [i]).replace(/"/g, '');
+            $(descriptionEl[i-1]).append(strNoQuotes);
+        }
+    }
     
-    localStorage.getItem("description1");
-
-    // $("#currentDay").text(moment(MM/DD));
+    restoreText();
     
     $(saveBtn1).click(function(){
         var serializedDescription = JSON.stringify(descriptionEl[0].value);
@@ -65,5 +66,4 @@ $(document).ready(function(){
         localStorage.setItem("description9", serializedDescription); 
     });
 
-    console.log(localStorage);
 });
