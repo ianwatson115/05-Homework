@@ -12,6 +12,8 @@ $(document).ready(function(){
     var saveBtn8 = $(".saveBtn8");
     var saveBtn9 = $(".saveBtn9");
 
+    $("#currentDay").text(moment().format("dddd Do MMMM YYYY"));
+
     const restoreText = () => {
         for(var i = 1; i < 10; i++) {
             var strNoQuotes = localStorage.getItem("description" + [i]).replace(/"/g, '');
