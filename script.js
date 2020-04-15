@@ -23,12 +23,47 @@ $(document).ready(function(){
     $(saveBtn1).click(function(){
         var serializedDescription = JSON.stringify(descriptionEl[0].value);
         localStorage.setItem("description1", serializedDescription); 
-    })
+    });
 
     $(saveBtn2).click(function(){
         var serializedDescription = JSON.stringify(descriptionEl[1].value);
         localStorage.setItem("description2", serializedDescription); 
-    })
+    });
+
+    $(saveBtn3).click(function(){
+        var serializedDescription = JSON.stringify(descriptionEl[2].value);
+        localStorage.setItem("description3", serializedDescription); 
+    });
+
+    $(saveBtn4).click(function(){
+        var serializedDescription = JSON.stringify(descriptionEl[3].value);
+        localStorage.setItem("description4", serializedDescription); 
+    });
+
+    $(saveBtn5).click(function(){
+        var serializedDescription = JSON.stringify(descriptionEl[4].value);
+        localStorage.setItem("description5", serializedDescription); 
+    });
+
+    $(saveBtn6).click(function(){
+        var serializedDescription = JSON.stringify(descriptionEl[5].value);
+        localStorage.setItem("description6", serializedDescription); 
+    });
+
+    $(saveBtn7).click(function(){
+        var serializedDescription = JSON.stringify(descriptionEl[6].value);
+        localStorage.setItem("description7", serializedDescription); 
+    });
+
+    $(saveBtn8).click(function(){
+        var serializedDescription = JSON.stringify(descriptionEl[7].value);
+        localStorage.setItem("description8", serializedDescription); 
+    });
+
+    $(saveBtn9).click(function(){
+        var serializedDescription = JSON.stringify(descriptionEl[8].value);
+        localStorage.setItem("description9", serializedDescription); 
+    });
 
     console.log(localStorage);
 });
