@@ -20,8 +20,27 @@ $(document).ready(function(){
             $(descriptionEl[i-1]).append(strNoQuotes);
         }
     }
+
+    const checkTime = () => {
+        var currTime = moment().hour();
+        var timeBlock = $(".time-block");
+        var hourBlocks = jQuery.makeArray(timeBlock);
+        console.log(currTime)
+
+        //for the time blocks before the current hour is 
+        for(var i = 0; i < hourBlocks.length; i ++) {
+            if (moment().isAfter(moment().hour(i+9))) {
+                $(hourBlocks[i]).find(descriptionEl).addClass("past");
+            } else if(moment().isSame(moment().hour(i+9))) {
+                $(hourBlocks[i]).find(descriptionEl).addClass("present");
+            } else { 
+                $(hourBlocks[i]).find(descriptionEl).addClass("future");
+            }
+        }
+    }
     
     restoreText();
+    checkTime();
     
     $(saveBtn1).click(function(){
         var serializedDescription = JSON.stringify(descriptionEl[0].value);
