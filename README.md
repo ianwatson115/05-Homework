@@ -1,7 +1,7 @@
 # 05-Work Day Schedule
 Ian Watson
 
-![05-Homework](screenshot.png)
+![05-Homework](master/screenshot.png)
 
 ## Description
 * This project allows you to schedule your typical work day (9am-5pm).
